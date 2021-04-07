@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Concurrency Exchange</h1>
+<input id="input" type="number" min="0">from
+<select id="from">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+    <option value="700">YJP</option>
+</select>to<select id="to">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+    <option value="700">YJP</option>
+</select>
+<button onclick="exchangeConcurrency()">Exchange</button>
+<p id="result"></p>
+</body>
+<script>
+    function exchangeConcurrency(){
+        let money = document.getElementById("input").value;
+        let to = document.getElementById("to").value;
+        let from = document.getElementById("from").value;
+        result = money*to/from
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</html>
